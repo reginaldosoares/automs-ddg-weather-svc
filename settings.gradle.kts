@@ -1,1 +1,1 @@
-rootProject.name = "automs-sample-automation-kt"
+rootProject.name = "automs-ddg-weather-svc"

@@ -20,7 +20,7 @@ FROM adoptopenjdk/openjdk8:alpine-slim
 RUN mkdir -p app/automation
 
 # Copy the jar to the production image from the builder stage.
-COPY --from=builder /app/build/libs/automs-sample-automation-kt-*.jar /app/automation/automs-sample-automation.jar
+COPY --from=builder /app/build/libs/automs-ddg-weather-svc-*.jar /app/automation/automs-ddg-weather-svc.jar
 
 # Run the web service on container startup.
-ENTRYPOINT ["java", "-jar", "/app/automation/automs-sample-automation.jar"]
+ENTRYPOINT ["java", "-jar", "/app/automation/automs-ddg-weather-svc.jar"]
