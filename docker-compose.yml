@@ -1,0 +1,36 @@
+version: "2"
+
+services:
+  webdriver:
+    image: browserless/chrome:1.39.0-chrome-stable
+    hostname: webdriver
+    container_name: automs-webdriver
+    environment:
+      - DEBUG=browserless/chrome*
+      - ENABLE_CORS=true
+      - DEFAULT_IGNORE_HTTPS_ERRORS=true
+      - CONNECTION_TIMEOUT=120000
+      - PREBOOT_CHROME=true
+      - KEEP_ALIVE=true
+      - CHROME_REFRESH_TIME=1800000
+      - ENABLE_API_GET=true
+    ports:
+      - "3000:3000"
+    networks:
+      - network-local
+
+  app-automs-sample-kt:
+    build:
+      context: .
+    image: automs/app-automs-sample-kt
+    container_name: app-automation
+    environment:
+      - PORT=8080
+      - CONTEXT=compose
+    ports:
+      - "8080:8080"
+    networks:
+      - network-local
+
+networks:
+  network-local:
