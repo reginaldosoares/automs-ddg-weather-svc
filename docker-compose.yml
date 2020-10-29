@@ -22,7 +22,7 @@ services:
   app-automs-sample-kt:
     build:
       context: .
-    image: automs/app-automs-sample-kt
+    image: automs/ddg-weather-svc
     container_name: app-automation
     environment:
       - PORT=8080

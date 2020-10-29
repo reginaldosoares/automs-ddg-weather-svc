@@ -11,6 +11,6 @@ done
 
 mkdir "$fname"
 
-docker cp app-automation:sample-automation-asset.html "$fname"/.
-docker cp app-automation:sample-automation-asset.png "$fname"/.
-docker cp app-automation:sample-automation-asset.json "$fname"/.
+docker cp app-automation:ddg-weather-svc-asset.html "$fname"/.
+docker cp app-automation:ddg-weather-svc-asset.png "$fname"/.
+docker cp app-automation:ddg-weather-svc-asset.json "$fname"/.
