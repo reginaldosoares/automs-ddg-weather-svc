@@ -1,5 +1,5 @@
-# automs-sample-automation-kt
-kotlin automation for automs
+# automs-ddg-weather-svc
+kotlin ddg automation for automs
 
 
 _request:_
@@ -8,7 +8,7 @@ http://localhost:8080/api/automation/run/
 ```
 ```json
 {
-    "automationResourceId": "publisher/sample-automation",
+    "automationResourceId": "soaresdev/automs-ddg-weather-svc",
     "orderId": "orderSample5543",
     "requestId": "sample-4624-9180-4ccda3cb5d73",
     "inputParams": {
